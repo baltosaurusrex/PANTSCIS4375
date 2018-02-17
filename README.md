@@ -1,9 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Team PANTS, People Applying Novel Technology Solutions
+Members:
+Raphael Baltazar
+Oscar
+Trent
+Raymond
+Brian
+Frank
 
-Things you may want to cover:
+This project is a Ruby on Rails webapp to create invoices for a certain business.
 
 * Ruby version
 
@@ -20,5 +26,3 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-* ...
