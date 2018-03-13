@@ -5,17 +5,37 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'wdm', '>= 0.1.0'
+#gem 'listen', '~> 3.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
+# DISABLED Use sqlite3 as the database for Active Record
+# gem 'sqlite3'
+
+# postgreSQL
+gem 'pg', '~> 0.18'
+
+# user auth
+gem 'devise'
+gem 'cancancan'
+gem 'rails_admin'
+
+# Search
+gem 'elasticsearch', git: 'git://github.com/elasticsearch/elasticsearch-ruby.git'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+
+gem 'jquery-rails'
+gem 'bootstrap',	'~> 4.0.0'
+gem 'material-sass',	'~> 4.0.0'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
