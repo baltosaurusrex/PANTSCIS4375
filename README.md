@@ -15,6 +15,8 @@ Raymond
 Brian
 
 Frank
+
+
 ----------------------------------------------------------------------------------
 
 This is a Ruby on Rails webapp to create invoices for a certain business.
@@ -27,3 +29,8 @@ Gems used:
 
 Material-sass (https://github.com/mkhairi/material-sass)
 
+Devise
+
+Cancancan
+
+Simple_Forms 
