@@ -6,15 +6,15 @@ Members:
 
 Raphael Baltazar
 
-Oscar
+Oscar Flores
 
-Trent
+Trent Morgan
 
 Raymond
 
-Brian
+Brian Fonkery
 
-Frank
+Frank Martinez
 
 
 ----------------------------------------------------------------------------------
@@ -27,7 +27,7 @@ DB: PostgreSQL
 
 Gems used:
 
-Material-sass (https://github.com/mkhairi/material-sass)
+Materialize-sass (https://github.com/mkhairi/materialize-sass)
 
 Devise
 

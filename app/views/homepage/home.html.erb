@@ -1,2 +1,33 @@
-<h1>Homepage#home</h1>
-<p>Find me in app/views/homepage/home.html.erb</p>
+<html>
+<div class="container">
+  <div class="row">
+    <!--replace this forloop with @ items.each-->
+    <% for i in 1..16 do%>
+    <!--replace card stuff with product information-->
+    <div class="col card l3 m4 s6">
+
+      <div class="card-image waves-effect waves-block waves-light">
+        <!--images from either host or lula roe site-->
+        <img class="activator" src="https://i.imgur.com/qfgNP3d.png">
+      </div>
+
+      <div class="card-content">
+        <!--product name-->
+        <span class="card-title activator grey-text text-darken-4">LOOK AT HER<i class="material-icons right">more_vert</i></span>
+        <!--link to product page-->
+        <p><%= link_to 'imgur link', "https://i.imgur.com/qfgNP3d.png"%></p>
+      </div>
+
+      <!--item description-->
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">LOOK AT HER<i class="material-icons right">close</i></span>
+        <p>image found on /r/awwnime</p>
+      </div>
+
+    </div>
+
+    <% end %>
+
+  </div>
+</div>
+</html>

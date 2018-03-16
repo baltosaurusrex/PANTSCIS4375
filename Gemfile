@@ -35,7 +35,7 @@ gem 'sass-rails', '~> 5.0'
 
 gem 'jquery-rails'
 gem 'bootstrap',	'~> 4.0.0'
-gem 'material-sass',	'~> 4.0.0'
+gem 'materialize-sass', '~> 1.0.0.alpha4'
 
 gem 'simple_form'
 
