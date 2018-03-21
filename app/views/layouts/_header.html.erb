@@ -1,8 +1,10 @@
 <html>
 <header class="page-header">
-  <nav>
-    <div class="nav-wrapper">
 
+  <nav>
+    <div class="container">
+    <div class="nav-wrapper">
+      <a href="#" data-activates="mobile-demo" class="btn button-collapse"><i class="material-icons">menu</i></a>
       <%= link_to 'Sam\'s LulaRoe site', root_path, :class=>"brand-logo"%>
 
       <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -20,31 +22,73 @@
         </li>
 
         <li>
-          <%= link_to root_path do%>
-            Home
-            <i class="small left material-icons">home</i>
-          <% end %>
-        </li>
-
-        <li>
-          <!--link to block form-->
-          <%= link_to root_path do %>
-            Cart
-            <i class="small left material-icons">shopping_cart</i>
-          <% end %>
-        </li>
-
-        <li>
           <%= render 'devise/menu/login_items'%>
         </li>
 
       </ul>
 
+
+        <ul id="slide-out" class="side-nav">
+          <li>
+            <form>
+              <div class="hide-on-med-and-down input-field">
+                <input id="search" type="search" required>
+                <label class="label-icon" for="search"><i class="left material-icons">search</i></label>
+                <i class="material-icons">close</i>
+              </div>
+            </form>
+          </li>
+          <li>
+            <%= link_to 'home', root_path%>
+          </li>
+
+        </ul>
+
+
+    </div>
+  </div>
+  </nav>
+
+  <nav>
+    <div class="container">
+  <div class="nav-wrapper">
+
+    <!--breadcrumbs?-->
+
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+
+      <li>
+        <%= link_to root_path do%>
+          Home
+          <i class="small left material-icons">home</i>
+        <% end %>
+      </li>
+
+      <li>
+        <!--link_to block form-->
+        <%= link_to root_path do%>
+          Cart
+          <i class="small left material-icons">shopping_cart</i>
+        <% end %>
+      </li>
+
+    </ul>
+
+  </div>
     </div>
   </nav>
   <div class="container">
-    <% if notice %><div class="alert alert-info"><%= notice %></div><% end %>
-    <% if alert %><div class="alert alert-warning"><%= alert %></div><% end %>
+    <% if notice %>
+      <div class="alert alert-info">
+        <%= notice %>
+      </div>
+    <% end %>
+    <% if alert %>
+      <div class="alert alert-warning">
+        <%= alert %>
+      </div>
+    <% end %>
   </div>
+
 </header>
 </html>

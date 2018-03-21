@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :rewards
   get 'homepage/home'
 
   root to: 'homepage#home'
