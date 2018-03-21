@@ -15,6 +15,14 @@
 #  last_sign_in_ip        :inet
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  firstname              :string
+#  lastname               :string
+#  address                :string
+#  city                   :string
+#  state                  :string
+#  zip                    :integer
+#  country                :string
+#  phone                  :string
 #
 
 class User < ApplicationRecord
@@ -22,4 +30,5 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  has_many :invoices
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180321212202) do
+ActiveRecord::Schema.define(version: 20180321222841) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,24 @@ ActiveRecord::Schema.define(version: 20180321212202) do
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "invoices", force: :cascade do |t|
+    t.float "discount"
+    t.bigint "user_id"
+    t.float "total_price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_invoices_on_user_id"
+  end
+
+  create_table "line_items", force: :cascade do |t|
+    t.bigint "inventory_id"
+    t.bigint "invoice_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["inventory_id"], name: "index_line_items_on_inventory_id"
+    t.index ["invoice_id"], name: "index_line_items_on_invoice_id"
   end
 
   create_table "rewards", force: :cascade do |t|
@@ -56,5 +74,8 @@ ActiveRecord::Schema.define(version: 20180321212202) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "invoices", "users"
+  add_foreign_key "line_items", "inventories"
+  add_foreign_key "line_items", "invoices"
   add_foreign_key "rewards", "users"
 end
