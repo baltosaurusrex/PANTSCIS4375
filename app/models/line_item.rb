@@ -2,11 +2,11 @@
 #
 # Table name: line_items
 #
-#  id           :integer          not null, primary key
-#  inventory_id :integer
-#  invoice_id   :integer
-#  created_at   :datetime         not null
-#  updated_at   :datetime         not null
+#  id         :integer          not null, primary key
+#  item_id    :integer
+#  invoice_id :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
 #
 
 class LineItem < ApplicationRecord

@@ -10,18 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180321222841) do
+ActiveRecord::Schema.define(version: 20180321225938) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "inventories", force: :cascade do |t|
-    t.string "name"
-    t.float "price"
-    t.integer "quantity"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "invoices", force: :cascade do |t|
     t.float "discount"
@@ -32,13 +24,22 @@ ActiveRecord::Schema.define(version: 20180321222841) do
     t.index ["user_id"], name: "index_invoices_on_user_id"
   end
 
+  create_table "items", force: :cascade do |t|
+    t.string "description"
+    t.float "price"
+    t.integer "quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "line_items", force: :cascade do |t|
-    t.bigint "inventory_id"
+    t.bigint "item_id"
     t.bigint "invoice_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["inventory_id"], name: "index_line_items_on_inventory_id"
+    t.integer "quantity"
     t.index ["invoice_id"], name: "index_line_items_on_invoice_id"
+    t.index ["item_id"], name: "index_line_items_on_item_id"
   end
 
   create_table "rewards", force: :cascade do |t|
@@ -75,7 +76,7 @@ ActiveRecord::Schema.define(version: 20180321222841) do
   end
 
   add_foreign_key "invoices", "users"
-  add_foreign_key "line_items", "inventories"
   add_foreign_key "line_items", "invoices"
+  add_foreign_key "line_items", "items"
   add_foreign_key "rewards", "users"
 end
