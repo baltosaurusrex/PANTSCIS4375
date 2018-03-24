@@ -1,8 +1,8 @@
 <html>
-<div class="container ">
+<% if false%>
   <div class="row">
     <!--replace this forloop with @ items.each-->
-    <% for i in 1..16 do%>
+    <% Item.all.each do |thingy|%>
       <!--replace card stuff with product information-->
       <div class="col card l3 m4 s6">
 
@@ -13,15 +13,29 @@
 
         <div class="card-content">
           <!--product name-->
-          <span class="card-title activator grey-text text-darken-4">TEST TITLE<i class="material-icons right">more_vert</i></span>
+          <span class="card-title activator grey-text text-darken-4">
+            <%= thingy.description%>
+            <i class="material-icons right">
+              more_vert
+            </i>
+          </span>
           <!--link to product page-->
-          <p><%= link_to 'LINKY', "https://static1.squarespace.com/static/51f9ef1ce4b0339e6c676011/t/5a58f6f224a694df3e2a1a07/1515779837356/PRODUCT-amyDETAILS.jpg"%></p>
+          <p>
+            <%= link_to 'More', "https://static1.squarespace.com/static/51f9ef1ce4b0339e6c676011/t/5a58f6f224a694df3e2a1a07/1515779837356/PRODUCT-amyDETAILS.jpg"%>
+          </p>
         </div>
 
         <!--item description-->
         <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">TEST TITLE<i class="material-icons right">close</i></span>
-          <p>image found on the lularoe website</p>
+          <span class="card-title grey-text text-darken-4">
+            <%= thingy.description%>
+            <i class="material-icons right">
+              close
+            </i>
+          </span>
+          <p>
+            image found on the lularoe website
+          </p>
         </div>
 
       </div>
@@ -29,5 +43,5 @@
     <% end %>
 
   </div>
-</div>
+  <% end%>
 </html>

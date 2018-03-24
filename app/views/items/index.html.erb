@@ -1,30 +1,63 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Items</h1>
+<h1>/app/views/items/index.html.erb</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Quantity</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="row">
+  <% @items.each do |item| %>
+    <div class="col card l3 m4 s6">
 
-  <tbody>
-    <% @items.each do |item| %>
-      <tr>
-        <td><%= item.description %></td>
-        <td><%= item.price %></td>
-        <td><%= item.quantity %></td>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="https://static1.squarespace.com/static/51f9ef1ce4b0339e6c676011/t/5a58f6f224a694df3e2a1a07/1515779837356/PRODUCT-amyDETAILS.jpg">
+      </div>
+
+      <div class="card-content">
+
+        <span class="card-title activator grey-text text-darken-4">
+          <%= item.description %>
+          <i class="material-icons right">
+            more_vert
+          </i>
+        </span>
+        <p>
+          brief text here
+        </p>
+      </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">
+            <%= item.description%>
+            <i class="material-icons right">
+              close
+            </i>
+          </span>
+          <div class="row">
+            <div class="col s6">
+            <% if item.quantity > 0%>
+                <p>In Stock: <%= item.quantity %></p>
+              <% else %>
+                <p>Out of Stock!</p>
+            <% end %>
+            </div>
+            <div class="col s6">
+              <p>
+                $<%= item.price %>
+              </p>
+            </div>
+          </div>
+          <p>
+            In here goes some text about the product
+          </p>
+
+          <%= link_to 'Show', item %>
+
+          <%if false%>
+            <%= link_to 'Edit', edit_item_path(item) %>
+          <% end%>
+        </div>
+
+      </div>
+
+  <% end %>
+</div>
 
 <br>
 

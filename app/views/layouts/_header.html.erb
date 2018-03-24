@@ -4,7 +4,7 @@
   <nav>
     <div class="container">
     <div class="nav-wrapper">
-      <a href="#" data-activates="mobile-demo" class="btn button-collapse"><i class="material-icons">menu</i></a>
+
       <%= link_to 'Sam\'s LulaRoe site', root_path, :class=>"brand-logo"%>
 
       <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -24,24 +24,6 @@
         <%= render 'devise/menu/login_items'%>
 
       </ul>
-
-
-        <ul id="slide-out" class="side-nav">
-          <li>
-            <form>
-              <div class="hide-on-med-and-down input-field">
-                <input id="search" type="search" required>
-                <label class="label-icon" for="search"><i class="left material-icons">search</i></label>
-                <i class="material-icons">close</i>
-              </div>
-            </form>
-          </li>
-          <li>
-            <%= link_to 'home', root_path%>
-          </li>
-
-        </ul>
-
 
     </div>
   </div>
@@ -75,18 +57,5 @@
   </div>
     </div>
   </nav>
-  <div class="container">
-    <% if notice %>
-      <div class="alert alert-info">
-        <%= notice %>
-      </div>
-    <% end %>
-    <% if alert %>
-      <div class="alert alert-warning">
-        <%= alert %>
-      </div>
-    <% end %>
-  </div>
-
 </header>
 </html>

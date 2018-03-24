@@ -1,19 +1,33 @@
 <p id="notice"><%= notice %></p>
+<h1>/app/view/items/show.html.erb</h1>
+<div class="row">
+  <div class="col l4 m4 s12">
+    <!--item image-->
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="https://static1.squarespace.com/static/51f9ef1ce4b0339e6c676011/t/5a58f6f224a694df3e2a1a07/1515779837356/PRODUCT-amyDETAILS.jpg">
+      </div>
+    </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @item.description %>
-</p>
+    <% if @item.quantity > 0%>
+      <p class="flow-text">In Stock: <%= @item.quantity %></p>
+    <% else %>
+      <p class="flow-text">Out of Stock!</p>
+    <% end %>
 
-<p>
-  <strong>Price:</strong>
-  <%= @item.price %>
-</p>
+  </div>
 
-<p>
-  <strong>Quantity:</strong>
-  <%= @item.quantity %>
-</p>
+    <div class="center -align">
+      <div class="col l8 m8 s12">
+        <!--item description-->
+        <h1><%= @item.description %></h1>
+        <br>
+        <p class="flow-text">Price: $<%= @item.price %></p>
+        <p class="flow-text">some text goes here about the product</p>
+      </div>
+    </div>
+
+</div>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
