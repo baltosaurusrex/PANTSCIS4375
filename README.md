@@ -10,7 +10,7 @@ Oscar Flores
 
 Trent Morgan
 
-Raymond
+Raymond Nguyen
 
 Brian Fonkery
 
@@ -29,8 +29,8 @@ Gems used:
 
 Materialize-sass (https://github.com/mkhairi/materialize-sass)
 
-Devise
+Devise (https://github.com/plataformatec/devise)
 
-Cancancan
+Cancancan (https://github.com/CanCanCommunity/cancancan)
 
-Simple_Forms 
+Simple_Forms (https://github.com/plataformatec/simple_form)
