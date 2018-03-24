@@ -4,7 +4,7 @@ Team PANTS, People Applying Novel Technology Solutions
 
 Members:
 
-Raphael Baltazar
+Raphael Baltazar (https://www.linkedin.com/in/raphael-baltazar/)
 
 Oscar Flores
 
@@ -12,7 +12,7 @@ Trent Morgan
 
 Raymond Nguyen
 
-Brian Fonkery
+Brian Fonkert (https://www.linkedin.com/in/brian-fonkert)
 
 Frank Martinez
 
