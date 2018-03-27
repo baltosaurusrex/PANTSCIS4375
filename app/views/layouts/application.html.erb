@@ -10,11 +10,16 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   </head>
-
   <body class="">
     <%= render "layouts/header" %>
+
+    <aside>
+      <%= render "layouts/sidebar" %>
+    </aside>
+
     <div class="container">
     <main>
+
       <% if notice %>
         <div class="alert alert-info">
           <div class="card">
@@ -24,6 +29,7 @@
           </div>
         </div>
       <% end %>
+
       <% if alert %>
         <div class="alert alert-warning">
           <div class="card">
@@ -33,9 +39,12 @@
           </div>
         </div>
       <% end %>
+
       <%= yield %>
     </main>
     </div>
-    <%= render "layouts/footer" %>
+
   </body>
+  <%= render "layouts/footer" %>
+
 </html>
