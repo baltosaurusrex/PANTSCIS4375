@@ -14,7 +14,7 @@ Raymond Nguyen
 
 Brian Fonkert (https://www.linkedin.com/in/brian-fonkert)
 
-Frank Martinez
+Frank Martinez (https://www.linkedin.com/in/frank-martinez-1a8b499a/)
 
 
 ----------------------------------------------------------------------------------
