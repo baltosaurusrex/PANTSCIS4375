@@ -13,10 +13,6 @@
   <body class="">
     <%= render "layouts/header" %>
 
-    <aside>
-      <%= render "layouts/sidebar" %>
-    </aside>
-
     <div class="container">
     <main>
 
@@ -46,5 +42,9 @@
 
   </body>
   <%= render "layouts/footer" %>
-
+<script>
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+    });
+</script>
 </html>
