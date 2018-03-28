@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 <h1>/app/view/items/show.html.erb</h1>
 <div class="row">
   <div class="col l4 m4 s12">
@@ -8,16 +7,9 @@
         <img class="activator" src="https://static1.squarespace.com/static/51f9ef1ce4b0339e6c676011/t/5a58f6f224a694df3e2a1a07/1515779837356/PRODUCT-amyDETAILS.jpg">
       </div>
     </div>
-
-    <% if @item.quantity > 0%>
-      <p class="flow-text">In Stock: <%= @item.quantity %></p>
-    <% else %>
-      <p class="flow-text">Out of Stock!</p>
-    <% end %>
-
   </div>
 
-    <div class="center -align">
+    <div class="right-align">
       <div class="col l8 m8 s12">
         <!--item description-->
         <h1><%= @item.name %></h1>
@@ -40,58 +32,53 @@
               <tr>
                 <td>Stock</td>
                 <% if @item.xxs > 0%>
-                  <td>In Stock: <%= @item.xxs %></td>
+                  <td><%= @item.xxs %></td>
                 <% else %>
                   <p>Out of Stock!</p>
                 <% end %>
 
                 <% if @item.xs > 0%>
-                  <td>In Stock: <%= @item.xs %></td>
+                  <td><%= @item.xs %></td>
                 <% else %>
                   <p>Out of Stock!</p>
                 <% end %>
 
                 <% if @item.s > 0%>
-                  <td>In Stock: <%= @item.s %></td>
+                  <td><%= @item.s %></td>
                 <% else %>
                   <p>Out of Stock!</p>
                 <% end %>
 
                 <% if @item.m > 0%>
-                  <td>In Stock: <%= @item.m %></td>
+                  <td><%= @item.m %></td>
                 <% else %>
                   <p>Out of Stock!</p>
                 <% end %>
                 <% if @item.l > 0%>
-                  <td>In Stock: <%= @item.l %></td>
+                  <td><%= @item.l %></td>
                 <% else %>
                   <p>Out of Stock!</p>
                 <% end %>
 
                 <% if @item.xl > 0%>
-                  <td>In Stock: <%= @item.xl %></td>
+                  <td><%= @item.xl %></td>
                 <% else %>
                   <p>Out of Stock!</p>
                 <% end %>
 
                 <% if @item.xxl > 0%>
-                  <td>In Stock: <%= @item.xxl %></td>
+                  <td><%= @item.xxl %></td>
                 <% else %>
                   <p>Out of Stock!</p>
                 <% end %>
 
                 <% if @item.xxxl > 0%>
-                  <td>In Stock: <%= @item.xxxl %></td>
+                  <td><%= @item.xxxl %></td>
                 <% else %>
                   <p>Out of Stock!</p>
                 <% end %>
               </tr>
             </table>
-            <% if @item.quantity > 0%>
-              <p>In Stock: <%= @item.quantity %></p>
-            <% else %>
-              <p>Out of Stock!</p>
-            <% end %>
           </div>
         <p class="flow-text">Price: $<%= @item.price %></p>
         <p class="flow-text"><%= @item.description%></p>
