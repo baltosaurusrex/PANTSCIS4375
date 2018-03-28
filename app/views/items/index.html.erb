@@ -13,18 +13,18 @@
       <div class="card-content">
 
         <span class="card-title activator grey-text text-darken-4">
-          <%= item.description %>
+          <%= item.name %>
           <i class="material-icons right">
             more_vert
           </i>
         </span>
-        <p>
-          brief text here
+        <p class="truncate">
+          <%= item.description%>
         </p>
       </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">
-            <%= item.description%>
+            <%= item.name%>
             <i class="material-icons right">
               close
             </i>
@@ -44,7 +44,7 @@
             </div>
           </div>
           <p>
-            In here goes some text about the product
+            <%= item.description%>
           </p>
 
           <%= link_to 'Show', item %>

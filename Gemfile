@@ -37,6 +37,8 @@ gem 'jquery-rails'
 gem 'bootstrap',	'~> 4.0.0'
 gem 'materialize-sass', '~> 1.0.0.alpha4'
 
+gem 'acts_as_shopping_cart', '~> 0.4.1'
+
 gem 'simple_form'
 
 ###########################
