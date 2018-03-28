@@ -1,5 +1,6 @@
 <html>
-<% if false%>
+
+<!--Banner goes here RAYMOND'S WORK-->
   <div class="row">
     <!--replace this forloop with @ items.each-->
     <% Item.all.each do |thingy|%>
@@ -14,7 +15,7 @@
         <div class="card-content">
           <!--product name-->
           <span class="card-title activator grey-text text-darken-4">
-            <%= thingy.description%>
+            <%= thingy.name%>
             <i class="material-icons right">
               more_vert
             </i>
@@ -28,20 +29,20 @@
         <!--item description-->
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">
-            <%= thingy.description%>
+            <%= thingy.name%>
             <i class="material-icons right">
               close
             </i>
           </span>
           <p>
-            image found on the lularoe website
+            <%= thingy.description%>
           </p>
         </div>
 
       </div>
 
-    <% end %>
+    <% end %><!--end of for to display all items-->
 
   </div>
-  <% end%>
+
 </html>
