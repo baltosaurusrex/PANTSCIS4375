@@ -20,10 +20,81 @@
     <div class="center -align">
       <div class="col l8 m8 s12">
         <!--item description-->
-        <h1><%= @item.description %></h1>
+        <h1><%= @item.name %></h1>
         <br>
+        <div class="row">
+          <div class="col s12">
+
+            <table>
+              <tr>
+                <th>Size</th>
+                <th>XXS</th>
+                <th>XS</th>
+                <th>S</th>
+                <th>M</th>
+                <th>L</th>
+                <th>XL</th>
+                <th>2XL</th>
+                <th>3XL</th>
+              </tr>
+              <tr>
+                <td>Stock</td>
+                <% if @item.xxs > 0%>
+                  <td>In Stock: <%= @item.xxs %></td>
+                <% else %>
+                  <p>Out of Stock!</p>
+                <% end %>
+
+                <% if @item.xs > 0%>
+                  <td>In Stock: <%= @item.xs %></td>
+                <% else %>
+                  <p>Out of Stock!</p>
+                <% end %>
+
+                <% if @item.s > 0%>
+                  <td>In Stock: <%= @item.s %></td>
+                <% else %>
+                  <p>Out of Stock!</p>
+                <% end %>
+
+                <% if @item.m > 0%>
+                  <td>In Stock: <%= @item.m %></td>
+                <% else %>
+                  <p>Out of Stock!</p>
+                <% end %>
+                <% if @item.l > 0%>
+                  <td>In Stock: <%= @item.l %></td>
+                <% else %>
+                  <p>Out of Stock!</p>
+                <% end %>
+
+                <% if @item.xl > 0%>
+                  <td>In Stock: <%= @item.xl %></td>
+                <% else %>
+                  <p>Out of Stock!</p>
+                <% end %>
+
+                <% if @item.xxl > 0%>
+                  <td>In Stock: <%= @item.xxl %></td>
+                <% else %>
+                  <p>Out of Stock!</p>
+                <% end %>
+
+                <% if @item.xxxl > 0%>
+                  <td>In Stock: <%= @item.xxxl %></td>
+                <% else %>
+                  <p>Out of Stock!</p>
+                <% end %>
+              </tr>
+            </table>
+            <% if @item.quantity > 0%>
+              <p>In Stock: <%= @item.quantity %></p>
+            <% else %>
+              <p>Out of Stock!</p>
+            <% end %>
+          </div>
         <p class="flow-text">Price: $<%= @item.price %></p>
-        <p class="flow-text">some text goes here about the product</p>
+        <p class="flow-text"><%= @item.description%></p>
       </div>
     </div>
 
