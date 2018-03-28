@@ -5,7 +5,7 @@
     <div class="container">
     <div class="nav-wrapper">
 
-      <a href="#" data-target="slide-out" class="button-collapse"><i class="left material-icons">apps</i></a>
+      <!---<a href="#" data-target="slide-out" class="button-collapse"><i class="left material-icons">apps</i></a>--->
 
       <%= link_to 'Sam\'s LulaRoe site', root_path, :class=>"brand-logo hide-on-med-and-down"%>
 
@@ -41,29 +41,33 @@
 
     </div>
       <div class="nav-content">
-        <ul class="tabs tabs-transparent">
+        <ul class="tabs tabs-transparent center-align">
 
-          <li class="tab">
+          <li class="tab waves-effect">
             <%= link_to root_path do%>
-              Shirts
+              Men
+            <% end %>
+          </li>
+          <li class="tab waves-effect">
+            <%= link_to root_path do%>
+              Women
+            <% end %>
+          </li>
+          <li class="tab waves-effect">
+            <%= link_to root_path do%>
+              Boys
+            <% end %>
+          </li>
+          <li class="tab waves-effect">
+            <%= link_to root_path do%>
+              Girls
             <% end %>
           </li>
           <li class="tab">
             <%= link_to root_path do%>
-              Pants
+              Exclusives
             <% end %>
           </li>
-          <li class="tab">
-            <%= link_to root_path do%>
-              Shoes
-            <% end %>
-          </li>
-          <li class="tab">
-            <%= link_to root_path do%>
-              About
-            <% end %>
-          </li>
-
 
         </ul>
       </div>

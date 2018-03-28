@@ -6,11 +6,11 @@ Members:
 
 Raphael Baltazar (https://www.linkedin.com/in/raphael-baltazar/)
 
-Oscar Flores
+Oscar Flores (https://www.linkedin.com/in/os-flores/)
 
-Trent Morgan
+Trent Morgan (https://www.linkedin.com/in/trent-m-80a237129/)
 
-Raymond Nguyen
+Raymond Nguyen (https://www.linkedin.com/in/rnguyen4/)
 
 Brian Fonkert (https://www.linkedin.com/in/brian-fonkert)
 
