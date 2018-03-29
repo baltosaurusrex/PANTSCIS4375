@@ -19,7 +19,7 @@ Frank Martinez (https://www.linkedin.com/in/frank-martinez-1a8b499a/)
 
 ----------------------------------------------------------------------------------
 
-This is a Ruby on Rails webapp to create invoices for a certain business.
+This is a Ruby on Rails ecommerce-like webapp to create invoices for a certain business.
 
 DB: PostgreSQL
 
@@ -34,3 +34,14 @@ Devise (https://github.com/plataformatec/devise)
 Cancancan (https://github.com/CanCanCommunity/cancancan)
 
 Simple_Forms (https://github.com/plataformatec/simple_form)
+
+
+---------------------------------------------------------------
+
+various guides used as reference
+
+Devise, Cancancan, Rails_admin: https://codepany.com/blog/rails-5-user-accounts-with-3-types-of-roles-devise-rails_admin-cancancan/
+
+Devise, cancancan, and rails_admin's respective github wiki's.
+
+ENV vars: https://stackoverflow.com/questions/17151324/securely-providing-the-database-password-in-a-rails-app

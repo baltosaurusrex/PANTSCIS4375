@@ -1,5 +1,11 @@
-<%= @user.firstname %>
-<%= @user.lastname %>
-<%= @user.email %>
-<%= @user.city %>
-<%= link_to 'Edit', edit_user_registration_path%>
+<div class="container">
+  <div class="card">
+    <ul>
+      <li><%= @user.firstname %></li>
+      <li><%= @user.lastname %></li>
+      <li><%= @user.email %></li>
+      <li><%= @user.city %></li>
+      <li><%= link_to 'Edit', edit_user_registration_path%></li>
+    </ul>
+  </div>
+</div>

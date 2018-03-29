@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  authenticate :user do
+    mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+    resources :invoices
+    resources :rewards
+  end
   resources :items
   resources :line_items
-  resources :invoices
-  resources :rewards
+
   get 'homepage/home'
 
   root to: 'items#index'
