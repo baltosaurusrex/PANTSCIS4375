@@ -9,7 +9,15 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  name        :string
-#  type        :string
+#  itemtype    :string
+#  xxs         :integer
+#  xs          :integer
+#  s           :integer
+#  m           :integer
+#  l           :integer
+#  xl          :integer
+#  xxl         :integer
+#  xxxl        :integer
 #
 
 require 'test_helper'

@@ -23,6 +23,7 @@
 #  zip                    :integer
 #  country                :string
 #  phone                  :string
+#  admin                  :boolean          default(FALSE)
 #
 
 class User < ApplicationRecord

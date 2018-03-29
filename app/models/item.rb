@@ -9,7 +9,15 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  name        :string
-#  type        :string
+#  itemtype    :string
+#  xxs         :integer
+#  xs          :integer
+#  s           :integer
+#  m           :integer
+#  l           :integer
+#  xl          :integer
+#  xxl         :integer
+#  xxxl        :integer
 #
 
 class Item < ApplicationRecord
@@ -17,3 +25,5 @@ class Item < ApplicationRecord
   has_many :invoices, through: :line_items
   searchkick
 end
+
+

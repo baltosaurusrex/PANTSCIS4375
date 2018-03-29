@@ -11,7 +11,7 @@ Item.create! :name=>"Alice", :price=>5.00, :quantity=>10, :description=>"this wo
 
 User.create! :email=>"asdf@as.df", :firstname=>"as", :lastname=>"df", :city=>"houston", :state=>"texas",:zip=>77083,:country=>"united states",:phone=>"1234567890", :password=>"password",:password_confirmation=>"password"
 User.create! :email=>"qwer@as.df", :firstname=>"qw", :lastname=>"er", :city=>"houston", :state=>"texas",:zip=>77083,:country=>"united states",:phone=>"1234567890", :password=>"password",:password_confirmation=>"password"
-
+User.create! :email=>"sam@gulei.ra", :firstname=>"sam", :lastname=>"aguleira", :city=>"houston", :state=>"texas",:zip=>77083,:country=>"united states",:phone=>"1234567890", :password=>"password",:password_confirmation=>"password", :admin=>true
 Invoice.create(discount: 0.00,user_id: user.first, total_price: 10.00)
 
 LineItem.create(item_id: item.first, invoice_id: invoice.first)
