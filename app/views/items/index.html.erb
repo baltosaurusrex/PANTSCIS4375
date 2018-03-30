@@ -1,5 +1,9 @@
 <h1>/app/views/items/index.html.erb</h1>
-<%= link_to 'admin',rails_admin_path,:class=> "btn"%>
+
+<% if can? :access, :rails_admin%>
+  <%= link_to 'admin',rails_admin_path,:class=> "btn"%>
+<%end%>
+
 <div class="row">
   <% @items.each do |item| %>
     <div class="col card l3 m4 s6">
