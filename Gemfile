@@ -25,7 +25,7 @@ gem 'cancancan'
 gem 'rails_admin'
 
 # Search
-#gem 'elasticsearch', git: 'git://github.com/elasticsearch/elasticsearch-ruby.git'
+gem 'elasticsearch', git: 'git://github.com/elasticsearch/elasticsearch-ruby.git'
 gem 'searchkick'
 
 # Use Puma as the app server
