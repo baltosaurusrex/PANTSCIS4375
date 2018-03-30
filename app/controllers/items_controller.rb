@@ -9,6 +9,15 @@ class ItemsController < ApplicationController
     @items = Item.all
   end
 
+  def search
+    search = params[:term].present? ? params[:term] : nil
+    @item = if search
+              Item.search(search)
+            else
+              Item.all
+            end
+  end
+
   # GET /items/1
   # GET /items/1.json
   def show
