@@ -28,9 +28,7 @@
   </ul>
 </div>
 
-
-
-
+<div class="container">
   <div class="row">
     <!--replace this forloop with @ items.each-->
     <% Item.all.each do |thingy|%>
@@ -74,28 +72,5 @@
     <% end %><!--end of for to display all items-->
 
   </div>
-<!--Import jQuery before materialize.js-->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-<script>
-    $(document).ready(function(){
-        // Init Carousel
-        $('.carousel').carousel();
-
-        // Init Carousel Slider
-        $('.carousel.carousel-slider').carousel({fullWidth:true});
-
-        // Fire off toast
-        //Materialize.toast('Hello World', 3000);
-
-        // Init Slider
-        $('.slider').slider();
-
-        // Init Modal
-        $('.modal').modal();
-
-        // Init Sidenav
-        $('.button-collapse').sideNav();
-    });
-</script>
+</div>
 </html>
