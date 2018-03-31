@@ -10,12 +10,7 @@ class ItemsController < ApplicationController
   end
 
   def search
-    search = params[:term].present? ? params[:term] : nil
-    @item = if search
-              Item.search(search)
-            else
-              Item.all
-            end
+    @itemsearches = params[:term].present? Item.search(params[:term]) ? params[:term] : nil
   end
 
   # GET /items/1
@@ -80,6 +75,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:description, :price, :quantity)
+      params.require(:item).permit(:description, :price, :quantity,:name)
     end
 end

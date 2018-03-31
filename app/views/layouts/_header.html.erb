@@ -15,9 +15,15 @@
           <form>
 
             <div class="hide-on-med-and-down input-field">
-              <input id="search" type="search" required>
-              <label class="label-icon" for="search"><i class="left material-icons">search</i></label>
-              <i class="material-icons">close</i>
+              <%= form_tag(search_items_path, method: :post, class: "search") do%>
+
+                <%= text_field_tag :term, params[:term], placeholder: "U wot m8..." do %>
+                  <label class="label-icon" for="search"><i class="left material-icons">search</i></label>
+                  <i class="material-icons">close</i>
+                  <% end%>
+                <%= submit_tag 'LOOK', class: "btn"%>
+
+              <%end%>
             </div>
 
           </form>
